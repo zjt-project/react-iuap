@@ -1,0 +1,108 @@
+.position-scroll{
+    position: fixed;
+    z-index: 999;
+    right: 25px;
+    top: 60px;
+}
+.open-icon{
+    .uf{
+        display: block;
+        padding: 0;
+        font-size: 30px;
+    }
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 3px 0px 0px 3px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px #226;
+    border: 1px solid #226;
+}
+.scroll-list-content{
+    width: 150px;
+    padding: 10px 0 0 10px;
+    box-sizing: border-box;
+    border-radius: 3px 0px 0px 3px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 5px;
+    
+
+}
+.scroll-list .li-item{
+    height: 30px;
+    a{
+        cursor: pointer;
+        display: block;
+        height: 30px;
+        display: flex;
+    }
+    .left-con{
+        height: 30px;
+        width: 12px;
+        text-align: center;
+        line-height: 30px;
+        position: relative;
+        .dian{
+            display: inline-block;
+            height: 8px;
+            width: 8px;
+            border-radius: 50px;
+            background: #d0d0d0;
+        }
+    }
+    .left-con:before{
+        content: "";
+        display: block;
+        height: 9px;
+        width: 2px;
+        background: #d0d0d0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .left-con:after{
+        content: "";
+        display: block;
+        height: 9px;
+        width: 2px;
+        background: #d0d0d0;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .text{
+        height: 30px;
+        line-height: 30px;
+        width: 79px;
+        font-size: 13px;
+        text-align: left;
+        color: rgb(51, 51, 51);
+        margin-left: 5px;
+    }
+}
+.scroll-list .li-item:first-child{
+    .left-con:before{
+        display: none;
+    }
+}
+.scroll-list .li-item:last-child{
+    .left-con:after{
+        display: none;
+    }
+}
+
+.scroll-list .li-item.active{
+    .left-con:after,
+    .left-con:before{
+        background: #E14C46;
+    }
+    .dian{
+        background: #E14C46;
+    }
+    .text{
+        color: #E14C46
+    }
+}

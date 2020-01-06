@@ -1,0 +1,153 @@
+@import  '~bee-complex-grid/build/Grid.css';
+
+.demo-grid-wrapper {
+    .u-grid.ucf-example-grid {
+        background: #fff;
+        overflow: hidden;
+        table {
+            table-layout: fixed;
+        }
+
+        //修改table的header背景色颜色和body中隔行差
+
+
+        .table-menu {
+            height: 16px;
+            line-height: 1;
+        }
+
+        th.column-number-right,
+        td.column-number-right {
+            // text-align: right !important;
+        }
+    }
+    .u-input-group {
+        border-spacing: 0;
+    }
+    .u-table {
+
+        tr {
+            transition: none;
+            &:nth-child(2n) {
+                background: #FAFAFA;
+            }
+            &:nth-child(2n + 1) {
+                background: #ffffff;
+            }
+            &:hover, &.u-table-row-hover {
+                background: #EBECF0;
+
+            }
+            &.u-table-row {
+                &.selected, &.ref-multiple-table-row-selected {
+                    background: #FFF7E7;
+                }
+            }
+
+        }
+        th, td {
+            padding: 5px 4px;
+        }
+        th{
+            overflow: visible;
+            background-clip:padding-box;
+            word-break: keep-all;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: left;
+        }
+        tr.filterable th {
+            padding: 0 2px;
+            // height: 39px;
+        }
+
+    }
+    //处理分页样式
+    .u-pagination{
+        margin-bottom: 0 !important;
+        font-size : 10px;
+        border-top: 1px solid #d5d5d5;
+        .page_jump {
+            height : 100%;
+            line-height : 20px;
+            margin:2px;
+            .page_jump_value{
+                height : 20px;
+
+            }
+
+            span{
+                line-height: 20px;
+
+            }
+
+        }
+
+        .data_per_select {
+            margin : 2px;
+            height: 20px;
+
+            .u-select {
+                height: 20px;
+                .u-select-selection{
+                    height : 20px;
+                    .u-select-selection-selected-value{
+                        line-height: 20px;
+                    }
+                    .u-select-selection-rendered{
+                        line-height: 20px;
+                    }
+                    .u-select-arrow{
+                        top:30%;
+                    }
+                }
+            }
+
+            span {
+                line-height: 20px;
+            }
+        }
+
+        .u-pagination-total{
+            height: 20px;
+            line-height: 20px;
+            margin: 2px;
+            font-weight:bold;
+        }
+
+        .u-pagination-list{
+            margin: 2px;
+
+            li > a{
+                padding : 0px 12px;
+                font-size :10px;
+                line-height: 20px;
+                .uf{
+                    font-size :10px;
+                }
+            }
+            li > .iconBtn > a{
+                padding : 0px 9px;
+                font-size :10px;
+                line-height: 20px;
+                .uf{
+                    font-size :10px;
+                }
+            }
+        }
+
+
+
+    }
+
+    
+
+}
+.u-table-filter-column-pop-cont-item {
+    &>span {
+        margin: 0 !important;
+    }
+}
+
+
+
